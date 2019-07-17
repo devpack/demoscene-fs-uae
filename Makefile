@@ -7,6 +7,10 @@ CFLAGS = -O2 -Wall
 
 PREFIX ?= /usr/local
 
+ifeq ($(shell uname),Darwin)
+export PATH := /usr/local/opt/gettext/bin:$(PATH)
+endif
+
 VER = 3.0.0
 
 all: install
