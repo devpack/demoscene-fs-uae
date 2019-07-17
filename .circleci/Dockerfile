@@ -3,7 +3,7 @@
 # > docker login
 # > docker push cahirwpz/demoscene-fs-uae-buildenv:latest
 
-FROM debian:stretch
+FROM debian:buster
 
 WORKDIR /root
 

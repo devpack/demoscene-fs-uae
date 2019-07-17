@@ -10,9 +10,6 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: './bootstrap'
-      - run: './configure --without-libmpeg2 --prefix=/usr/local'
-      - run: 'make'
       - run: 'make install && tar cvzf /demoscene-fs-uae.tar.gz /usr/local'
       - store_artifacts:
           path: /demoscene-fs-uae.tar.gz
